@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 		if @user.valid?
 			if @user.save
 				# flash[:info]
-				redirect_to login_path
+				redirect_to users_path
 			end
 		else
 			# flash.now
