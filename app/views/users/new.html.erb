@@ -1,0 +1,36 @@
+	<!-- SIGN UP PAGE -->
+
+	
+
+<div class="signup col-md-2">
+	
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<%= link_to("Sign up", signup_path) %>
+		</li>
+		<li>
+			<a href="#">Log in</a>
+		</li>
+	</ul>
+
+	<br>
+
+	<%= form_for @user do |f| %>
+		<form class="form-group">
+	
+		<strong>First name</strong> <br>
+			<%= f.text_field :first_name, class: "form-control" %> <br>
+		<strong>Last name</strong> <br>
+			<%= f.text_field :last_name, class: "form-control" %> <br>
+		<strong>Username</strong> <br>
+			<%= f.text_field :username, class: "form-control" %> <br>
+		<strong>E-mail</strong> <br>
+			<%= f.text_field :email, class: "form-control" %> <br>
+		<strong>Password</strong> <br>
+			<%= f.password_field :password, class: "form-control" %> <br>
+		<strong>Confirm password</strong> <br>
+			<%= f.password_field :password_confirmation, class: "form-control" %>
+
+		</form>
+	<% end %>
+</div>
