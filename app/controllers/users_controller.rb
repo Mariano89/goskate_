@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation))
 		
-		if @user.valid?
+		if @user.valid? 
 			if @user.save
 				flash[:info] = "Signed up successfully"
 				redirect_to users_path
